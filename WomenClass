@@ -1,45 +1,22 @@
-
 public class WomenClassExercise {
 	
 	//Attributes of an object
-	String name;
-	int age;
-	int realAge;
+	public String name;
+	public int age;
+	public int realAge;
 	
-	//Reveal the real name of the object - if the age is more than 30.
-	public void condition() {
-	 if (age >= 30) {
-	        realAge = age + 5;
-	                System.out.println("You caught me lying.. my real age is :" + realAge);
-	}
-}
 
-	public void displayMsg() {
-		System.out.println("I am " + name);
-		System.out.println("My age is :" + age);
-}
-	
-	public static void main(String[] args) {
+		public WomenClassExercise(String name, int age) {
+			
 		// Instance Variables
-		WomenClassExercise Adi = new WomenClassExercise();		
-		Adi.name = "Adi Orpaz";
-		Adi.age = 23;
-		Adi.realAge = 23;
-		Adi.displayMsg();
-		Adi.condition();
+		this.name = name;
 		
-		WomenClassExercise Kim = new WomenClassExercise();
-		Kim.name = "Kim Yekutiel";
-		Kim.age = 22;
-		Kim.realAge = 20;
-		Kim.displayMsg();
-		Kim.condition();
-		
-		WomenClassExercise Eden = new WomenClassExercise();
-		Eden.name = "Eden Dayan";
-		Eden.age = 30;
-		Eden.realAge = 23;
-		Eden.displayMsg();
-		Eden.condition();
+		//Condition fo the age of 30+
+		if (age >= 30) {
+			this.realAge = age + 5;
 		}
+		else {this.realAge = age;
 	}
+	this.age = age;
+   }
+}
