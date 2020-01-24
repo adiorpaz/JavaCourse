@@ -34,6 +34,7 @@ public class WomenClassExercise {
 		Kim.realAge = 20;
 		Kim.displayMsg();
 		Kim.condition();
+		
 		WomenClassExercise Eden = new WomenClassExercise();
 		Eden.name = "Eden Dayan";
 		Eden.age = 30;
