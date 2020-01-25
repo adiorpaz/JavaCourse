@@ -22,5 +22,3 @@ public class AmountOfNumInArray {
 	System.out.println("The amount of times UserIput exists in the array is :" + counter);
 	}
 }
-
-//O(n)
