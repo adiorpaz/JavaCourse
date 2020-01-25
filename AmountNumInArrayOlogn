@@ -1,0 +1,50 @@
+import javax.swing.JOptionPane;
+
+public class AmountNumInArrayOlogn {
+
+	public static void main(String[] args) {
+		
+		//initialize variables
+		int[] arr = {2,4,7,15,36,36,36,86,100,112};
+		int length = arr.length;
+		int rightBorder = arr[length-1];
+		int leftBorder = arr[0];
+		int userInput = Integer.parseInt(JOptionPane.showInputDialog("Enter first number"));
+		System.out.println("The number that was entered by the user is:" + userInput);
+		
+		//Binary Search for array sort -  O(logn)
+		binarySearch(arr, length, rightBorder, leftBorder, userInput);
+		//Find the amount of times number is displayed in arr.
+		amountOfNumInArr(arr, userInput, length);
+	}
+		private static void amountOfNumInArr(int[] arr, int userInput, int length) {
+			int counter = 0;
+			
+		for (int i = 0; i < length ; i++) {
+			
+			if (arr[i] == userInput) {
+				counter++;
+				
+			}
+		}
+		System.out.println("The amount of times userInput is displayed in arr :" + counter);
+		return;
+	}
+		
+	private static void binarySearch(int[] arr, int length, int rightBorder, int leftBorder, int userInput) {
+		
+		int mid = arr[length / 2];
+		
+		if (mid == userInput) {
+			System.out.println("This is the number the user input:" + userInput);
+			return;
+		}
+		if (mid > userInput) {
+			rightBorder = arr[(length / 2) - 1];
+		}
+		else {
+			leftBorder = arr[(length / 2) +1];
+		    }
+	return;
+	}		
+}
