@@ -1,0 +1,26 @@
+import java.util.Arrays;
+
+import javax.swing.JOptionPane;
+
+public class AmountOfNumInArray {
+
+	public static void main(String[] args) {
+		
+		int[] arr = {2,4,7,15,36,36,36,86,100,112};
+		int length = arr.length;
+		int counter = 0;
+		int userInput = Integer.parseInt(JOptionPane.showInputDialog("Enter first number"));
+		System.out.println("The number that was entered by the user is:" + userInput);
+	
+	for (int i = 0; i < length ; i++) {
+		
+		if (arr[i] == userInput) {
+			counter++;
+			
+		}
+  	   }
+	System.out.println("The amount of times UserIput exists in the array is :" + counter);
+	}
+}
+
+//O(n)
